@@ -1,2 +1,2 @@
 config SHIELD_NICE!BOARD
-    def_bool $(shields_list_contains, nice!board)
+    def_bool $(shields_list_contains, niceboard)
