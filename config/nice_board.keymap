@@ -44,7 +44,7 @@
 
         layer1 {
             bindings = <
-                &kp ESC   &bt BT_NXT  &bt BT_PRV  &kp F3   &kp F4   &kp F5   &kp F6   &kp F7   &kp F8   &kp C_MUTE   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
+                &kp ESC   &bt BT_SEL 0  &bt BT_CLR  &kp F3   &kp F4   &kp F5   &kp F6   &kp F7   &kp F8   &kp C_MUTE   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
 
                 &kp GRAVE &kp N1   &kp N2   &kp N3   &kp N4   &kp N5   &kp N6   &kp N7   &kp N8   &kp N9   &kp N0   &kp MINUS   &kp EQUAL &kp BSPC   &mo 1
 
