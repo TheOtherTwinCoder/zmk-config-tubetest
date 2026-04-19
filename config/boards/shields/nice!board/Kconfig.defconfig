@@ -1,4 +1,4 @@
-if SHIELD_NICEBOARD
+if SHIELD_NICE_BOARD
 
 config ZMK_KEYBOARD_NAME
     default "NiceBoard"
