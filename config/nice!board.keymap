@@ -1,0 +1,87 @@
+/*
+ * Copyright (c) 2022 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/combos.h>
+
+/ {
+    macros {
+        copy: copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+
+            bindings =
+                <&kp LEFT_COMMAND DOWN>,
+                <&kp C>,
+                <&kp LEFT_COMMAND UP>;
+        };
+
+        paste: paste {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+
+            bindings =
+                <&kp LEFT_COMMAND DOWN>,
+                <&kp V>,
+                <&kp LEFT_COMMAND UP>;
+        };
+
+        chrome: chrome {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+
+            bindings =
+                <&kp LEFT_COMMAND DOWN>,
+                <&kp SPACE>,
+                <&kp LEFT_COMMAND UP>,
+                <&kp C>,
+                <&kp H>,
+                <&kp R>,
+                <&kp O>,
+                <&kp M>,
+                <&kp E>,
+                <&kp ENTER>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        layer1 {
+            bindings = <
+                &kp ESC   &bt BT_NXT  &bt BT_PRV  &kp F3   &kp F4   &kp F5   &kp F6   &kp F7   &kp F8   &kp C_MUTE   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
+
+                &kp GRAVE &kp N1   &kp N2   &kp N3   &kp N4   &kp N5   &kp N6   &kp N7   &kp N8   &kp N9   &kp N0   &kp MINUS   &kp EQUAL &kp BSPC   &mo 1
+
+                &kp TAB   &kp Q   &kp W   &kp E    &kp R    &kp T    &kp Y    &kp U    &kp I    &kp O   &kp P   &kp LBKT   &kp RBKT  &kp BSLH  &chrome
+
+                &kp CAPS  &kp A   &kp S   &kp D    &kp F    &kp G    &kp H    &kp J    &kp K    &kp L   &kp SEMI   &kp SQT   &kp ENTER &copy
+
+                &kp LSHFT &kp Z   &kp X   &kp C    &kp V    &kp B    &kp N    &kp M    &kp COMMA &kp DOT   &kp FSLH   &kp RSHFT   &paste
+
+                &kp LCTRL &kp LALT   &kp LGUI   &kp SPACE &kp LEFT &kp UP   &kp DOWN &kp RIGHT
+            >;
+        };
+
+        fnlayer {
+            bindings = <
+                &kp ESC   &kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &kp F6   &kp F7   &kp F8   &kp F9   &kp F10   &kp F11
+
+                &kp GRAVE &kp N1  &kp N2   &kp N3   &kp N4   &kp N5   &kp N6   &kp N7   &kp N8   &kp N9   &kp N0   &kp MINUS   &kp EQUAL &kp BSPC  &tog 1
+
+                &kp TAB   &kp Q   &kp W   &kp E    &kp R    &kp T    &kp Y    &kp U    &kp I    &kp O   &kp P   &kp LBKT   &kp RBKT  &kp BSLH  &chrome
+
+                &kp CAPS  &kp A   &kp S   &kp D    &kp F    &kp G    &kp H    &kp J    &kp K    &kp L   &kp SEMI   &kp SQT   &kp ENTER &copy
+
+                &kp LSHFT &kp Z   &kp X   &kp C    &kp V    &kp B    &kp N    &kp M    &kp COMMA &kp DOT   &kp FSLH   &kp RSHFT   &paste
+
+                &kp LCTRL &kp LALT   &kp LGUI   &kp SPACE &kp LEFT &kp UP   &kp DOWN &kp RIGHT
+            >;
+        };
+    };
+};
