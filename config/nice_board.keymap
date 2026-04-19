@@ -10,44 +10,35 @@
 
 / {
     macros {
-        copy: copy {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+    copy: copy {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
 
-            bindings =
-                <&kp LEFT_COMMAND DOWN>,
-                <&kp C>,
-                <&kp LEFT_COMMAND UP>;
-        };
-
-        paste: paste {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-
-            bindings =
-                <&kp LEFT_COMMAND DOWN>,
-                <&kp V>,
-                <&kp LEFT_COMMAND UP>;
-        };
-
-        chrome: chrome {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-
-            bindings =
-                <&kp LEFT_COMMAND DOWN>,
-                <&kp SPACE>,
-                <&kp LEFT_COMMAND UP>,
-                <&kp C>,
-                <&kp H>,
-                <&kp R>,
-                <&kp O>,
-                <&kp M>,
-                <&kp E>,
-                <&kp ENTER>;
-        };
+        bindings = <
+            &kp LC(C)
+        >;
     };
 
+    paste: paste {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+
+        bindings = <
+            &kp LC(V)
+        >;
+    };
+
+    chrome: chrome {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+
+        bindings = <
+            &kp LC(SPACE)
+            &kp C &kp H &kp R &kp O &kp M &kp E
+            &kp ENTER
+        >;
+    };
+};
     keymap {
         compatible = "zmk,keymap";
 
