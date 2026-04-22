@@ -8,7 +8,7 @@
 
     kscan0: kscan0 {
         compatible = "zmk,kscan-gpio-matrix";
-        diode-direction = "row2col";
+        diode-direction = "col2row";
         wakeup-source;
 
         /* Actual matrix: 15 rows x 6 cols
