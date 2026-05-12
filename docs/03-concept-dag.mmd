@@ -1,0 +1,145 @@
+%% PhysicsQuest concept-dependency DAG (Mermaid) — abbreviated view
+%% Full machine-readable graph in 03-concept-dag.json
+%% Rendered with: mermaid-cli  →  mmdc -i 03-concept-dag.mmd -o dag.svg
+
+flowchart LR
+  subgraph L1["Level 1 — Wonder & Senses"]
+    push_pull[push & pull]
+    gravity_int[gravity intuitive]
+    light_shadow[light & shadow]
+    hot_cold[hot/cold]
+    sound_lq[loud/quiet]
+    float_sink[float/sink]
+  end
+
+  subgraph L2["L2 — Everyday Forces"]
+    magnets[magnets]
+    friction_int[friction intuitive]
+    air_matter[air is matter]
+    weather[weather]
+    shadow_motion[shadow motion]
+    elasticity[elasticity]
+  end
+
+  subgraph L3["L3 — Materials & Energy"]
+    states[states of matter]
+    heat_basic[heat transfer]
+    sound_vib[sound = vibration]
+    light_refl[reflection]
+    circuit[complete circuit]
+    energy_sm[stored vs moving]
+  end
+
+  subgraph L4["L4 — Machines & Motion"]
+    simple_m[simple machines]
+    friction_n[friction named]
+    air_res[air resistance]
+    energy_f[energy forms]
+    sound_pitch[pitch ↔ freq]
+    earth_mag[Earth's magnet]
+  end
+
+  subgraph L5["L5 — Patterns of Nature"]
+    wave_b[waves]
+    light_refr[refraction]
+    em_magnet[electromagnet]
+    energy_cons_q[E conservation - qual]
+    pressure_q[pressure - qual]
+    heat_cap_q[heat capacity - qual]
+  end
+
+  subgraph L6["L6 — Measuring the World"]
+    sdt[speed/dist/time]
+    mw[mass vs weight]
+    density[density]
+    temp_sc[temp scales]
+    sp[series/parallel]
+    lenses_b[lenses basic]
+  end
+
+  subgraph L7["L7 — Newtonian Foundations"]
+    Fma[F = ma]
+    momentum[momentum]
+    work_power[work & power]
+    buoyancy[buoyancy]
+    optics_lp[lenses & prisms]
+    wave_fs[v = fλ]
+    vectors[vectors 2D]
+  end
+
+  subgraph L8["L8 — Classical I"]
+    kin1[kinematics 1D]
+    kin2[kinematics 2D]
+    nlaws[Newton's laws]
+    e_m_cons[E & p conservation]
+    circ[circular motion]
+    shm[SHM]
+    ohm[Ohm's law]
+    weq[wave equation]
+    fields[fields concept]
+    trig[trig tools]
+  end
+
+  subgraph L9["L9 — Classical II + Modern Intro"]
+    rot[rotational dyn]
+    fluid_d[fluid dynamics]
+    thermo[thermodynamics]
+    em_ind[EM induction]
+    ac[AC circuits]
+    wave_opt[wave optics]
+    sr[special relativity]
+    photo[photoelectric]
+    atoms[atomic models]
+    precalc[precalc tools]
+  end
+
+  subgraph L10["L10 — Pre-University"]
+    calc_kin[calculus kinematics]
+    maxwell[Maxwell integral]
+    quantum[quantum intro]
+    statmech[stat mech]
+    nuclear[nuclear physics]
+    semi[semiconductors]
+    modeling[applied modeling]
+  end
+
+  push_pull --> magnets & friction_int & elasticity
+  gravity_int --> air_res & mw
+  float_sink --> density & buoyancy
+  hot_cold --> states & heat_basic
+  light_shadow --> light_refl & shadow_motion
+  sound_lq --> sound_vib
+  friction_int --> friction_n
+  air_matter --> air_res & pressure_q
+  elasticity --> shm
+  states --> heat_cap_q
+  heat_basic --> heat_cap_q
+  heat_cap_q --> temp_sc --> thermo --> statmech
+  sound_vib --> sound_pitch --> wave_b
+  light_refl --> light_refr --> lenses_b --> optics_lp
+  wave_b --> wave_fs --> weq --> wave_opt
+  circuit --> sp --> ohm --> ac
+  magnets --> earth_mag --> em_magnet --> em_ind --> ac
+  em_ind --> maxwell
+  fields --> maxwell
+  energy_sm --> energy_f --> energy_cons_q --> work_power --> e_m_cons
+  simple_m --> work_power
+  friction_n --> nlaws
+  sdt --> kin1 --> kin2 --> calc_kin
+  mw --> Fma --> nlaws --> circ --> rot
+  nlaws --> rot
+  shm --> weq
+  vectors --> kin2 & nlaws
+  trig --> kin2 & weq
+  precalc --> calc_kin & quantum
+  momentum --> e_m_cons
+  Fma --> momentum
+  buoyancy --> fluid_d
+  pressure_q --> fluid_d
+  density --> buoyancy
+  wave_opt --> photo --> atoms --> quantum & nuclear
+  quantum --> semi
+  maxwell --> sr
+  calc_kin --> modeling
+  maxwell --> modeling
+  thermo --> modeling
