@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-display: "Nunito", system-ui, sans-serif;
+    --font-body: "Inter", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", monospace;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Dyslexia-friendly defaults */
+  body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+  }
+
+  /* High-contrast focus ring for accessibility */
+  :focus-visible {
+    @apply outline outline-2 outline-offset-2 outline-blue-500;
+  }
+}
+
+@layer utilities {
+  .tier-wonderland {
+    --tier-bg: #FFF9E6;
+    --tier-primary: #FF6B35;
+    --tier-secondary: #4ECDC4;
+    --tier-accent: #FFD93D;
+    --tier-text: #2D3436;
+  }
+
+  .tier-lab {
+    --tier-bg: #F0F4FF;
+    --tier-primary: #4361EE;
+    --tier-secondary: #7209B7;
+    --tier-accent: #4CC9F0;
+    --tier-text: #1A1A2E;
+  }
+
+  .tier-studio {
+    --tier-bg: #0D1117;
+    --tier-primary: #58A6FF;
+    --tier-secondary: #BC8CFF;
+    --tier-accent: #3FB950;
+    --tier-text: #E6EDF3;
+  }
+}
