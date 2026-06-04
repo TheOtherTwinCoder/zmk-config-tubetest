@@ -24,19 +24,19 @@
 
         /* 15 cols — driven HIGH during scan */
         col-gpios
-            = <&gpio0 06 GPIO_ACTIVE_HIGH> #D1
-            , <&gpio0 08 GPIO_ACTIVE_HIGH> #D0
-            , <&gpio0 17 GPIO_ACTIVE_HIGH> #D2
-            , <&gpio0 20 GPIO_ACTIVE_HIGH> #D3
-            , <&gpio0 22 GPIO_ACTIVE_HIGH> #D4
-            , <&gpio0 24 GPIO_ACTIVE_HIGH> #D5
-            , <&gpio1 00 GPIO_ACTIVE_HIGH> #D6
-            , <&gpio0 11 GPIO_ACTIVE_HIGH> #D7
-            , <&gpio1 04 GPIO_ACTIVE_HIGH> #D8
-            , <&gpio1 06 GPIO_ACTIVE_HIGH> #D9
-            , <&gpio0 09 GPIO_ACTIVE_HIGH> #D10
-            , <&gpio0 10 GPIO_ACTIVE_HIGH> #D16
-            , <&gpio1 01 GPIO_ACTIVE_HIGH> 
+            = <&gpio0 06 GPIO_ACTIVE_HIGH>
+            , <&gpio0 08 GPIO_ACTIVE_HIGH>
+            , <&gpio0 17 GPIO_ACTIVE_HIGH>
+            , <&gpio0 20 GPIO_ACTIVE_HIGH>
+            , <&gpio0 22 GPIO_ACTIVE_HIGH>
+            , <&gpio0 24 GPIO_ACTIVE_HIGH>
+            , <&gpio1 00 GPIO_ACTIVE_HIGH>
+            , <&gpio0 11 GPIO_ACTIVE_HIGH> 
+            , <&gpio1 04 GPIO_ACTIVE_HIGH>
+            , <&gpio1 06 GPIO_ACTIVE_HIGH>
+            , <&gpio0 09 GPIO_ACTIVE_HIGH>
+            , <&gpio0 10 GPIO_ACTIVE_HIGH>
+            , <&gpio1 01 GPIO_ACTIVE_HIGH>
             , <&gpio1 02 GPIO_ACTIVE_HIGH>
             , <&gpio1 07 GPIO_ACTIVE_HIGH>;
     };
